@@ -15,5 +15,5 @@ This docker container deploys an AMD ROCm 5.4.2 container based on ubuntu 22.04 
 
 |ENV Pame| Default Value | Possible Values | Notes |
 |:---| :----: | :----: |:--- |
-|PORT| 7820 | Any port about 1024-65565| |
+|PORT| 7860 | Any port about 1024-65565| |
 |EXTRA_ARGS| (blank) | Valid stable-diffusion-webui launch parameters| |
