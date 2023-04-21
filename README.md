@@ -1,6 +1,12 @@
 # stable-diffusion-webui-rocm
 A stable diffusion webui configuration for AMD ROCm
 
+## Requirements 
+
+* Working version of docker on 64-bit Linux. Need at least kernel 5.10 for AMD ROCm support. 
+* AMD rocm modules drivers loaded. Recommended 5.4.2 to match current release. 
+* Permissions to create and deploy docker containers
+
 ## docker-compose.yml
 
 ### Environment
