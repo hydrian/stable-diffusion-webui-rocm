@@ -1,0 +1,27 @@
+version: "2"
+services: 
+  sd-ui-rocm-54:
+    cap_add:
+      - SYS_PTRACE
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    environment:
+      # VERY COMMON NEED ENVIRONMENT VARIABLE
+      - HSA_OVERRIDE_GFX_VERSION=10.3.0
+    image: sd-ui-5.4
+    ipc: host
+    network_mode: "host"
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - models:/sd/models
+      - plugins:/sd/plugins
+      - outputs:/sd/outputs
+      - extensions:/sd/extensions
+volumes:
+  modules:
+  models:
+  plugins:
+  outputs: 
+  extensions:
