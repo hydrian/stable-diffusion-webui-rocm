@@ -1,6 +1,6 @@
 version: "2"
 services: 
-  sd-ui-rocm-54:
+  stable-diffusion-webui-rocm:
     cap_add:
       - SYS_PTRACE
     devices:
@@ -20,7 +20,6 @@ services:
       - outputs:/sd/outputs
       - extensions:/sd/extensions
 volumes:
-  modules:
   models:
   plugins:
   outputs: 
