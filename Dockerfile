@@ -5,7 +5,8 @@ ENV PORT=7820 \
     DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     PYTHONIOENCODING=UTF-8 \
-    REQS_FILE='requirements.txt' 
+    REQS_FILE='requirements.txt' \
+    COMMANDLINE_ARGS='--data-dir=/sd/configs' 
 
 WORKDIR /opt
 RUN apt-get -y update && \
@@ -13,9 +14,10 @@ RUN apt-get -y update && \
 	wget https://repo.radeon.com/amdgpu-install/5.4.2/ubuntu/jammy/amdgpu-install_5.4.50402-1_all.deb && \
 	apt-get install -y ./amdgpu-install_5.4.50402-1_all.deb && \
 	amdgpu-install -y --usecase=rocm --no-dkms && \
-	git clone https://github.com/hydrian/stable-diffusion-webui /sd
+	git https://github.com/hydrian/stable-diffusion-webui /sd
 
 WORKDIR /sd
+
 RUN 	apt-get autoremove -y && \
 	apt-get clean -y && \
 	rm -rf /var/lib/apt/lists/* && \
@@ -29,8 +31,8 @@ RUN 	apt-get autoremove -y && \
  
 EXPOSE ${PORT}
 
-VOLUME [ "/sd/models", "/sd/outputs","/sd/extensions", "/sd/plugins"]
-ENTRYPOINT python -d launch.py --precision full --no-half
+VOLUME [ "/sd/configs","/sd/models", "/sd/outputs","/sd/extensions", "/sd/plugins"]
+ENTRYPOINT python -d launch.py 
 
 	
 	

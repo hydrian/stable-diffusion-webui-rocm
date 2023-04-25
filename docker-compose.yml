@@ -9,17 +9,21 @@ services:
     environment:
       # VERY COMMON NEED ENVIRONMENT VARIABLE
       - HSA_OVERRIDE_GFX_VERSION=10.3.0
+      # Following line is needed to RX 5700
+      # - COMMANDLINE_ARGS='--data-dir=/sd/configs --precision full --no-half'
     image: sd-ui-5.4
     ipc: host
     network_mode: "host"
     security_opt:
       - seccomp:unconfined
     volumes:
+      - configs:/sd/configs
       - models:/sd/models
       - plugins:/sd/plugins
       - outputs:/sd/outputs
       - extensions:/sd/extensions
 volumes:
+  configs:
   models:
   plugins:
   outputs: 
