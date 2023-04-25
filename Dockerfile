@@ -23,9 +23,7 @@ RUN 	apt-get autoremove -y && \
 	source venv/bin/activate && \
 	ln -s /usr/bin/python3 /usr/bin/python && \
 	python3 -m pip install --upgrade pip wheel
-	#echo "Downloading SDv1.4 Model File.." && \
-  #wget --progress=bar -O /sd/models/Stable-diffusion/sd-v1.4.ckpt https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt 
-  
+	
 
 
  
