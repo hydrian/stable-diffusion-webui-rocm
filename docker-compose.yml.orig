@@ -10,8 +10,13 @@ services:
       # VERY COMMON NEED ENVIRONMENT VARIABLE
       - HSA_OVERRIDE_GFX_VERSION=10.3.0
       # Following line is needed to RX 5700
-      # - COMMANDLINE_ARGS='--precision full --no-half'
+<<<<<<< HEAD
+      # - COMMANDLINE_ARGS='--data-dir=/sd/configs --precision full --no-half'
     image: stable-diffusion-webui-rocm5.4:latest
+=======
+      # - COMMANDLINE_ARGS=' --precision full --no-half'
+    image: sd-ui-5.4
+>>>>>>> a11fe829f867eafb456a49e07a3b909e42d87099
     ipc: host
     network_mode: "host"
     security_opt:
