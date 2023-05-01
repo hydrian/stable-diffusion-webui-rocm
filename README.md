@@ -13,7 +13,7 @@ This docker container deploys an AMD ROCm 5.4.2 container based on ubuntu 22.04 
 
 ### Environment
 
-|ENV Pame| Default Value | Possible Values | Notes |
+|ENV Parameter| Default Value | Possible Values | Notes |
 |:---| :----: | :----: |:--- |
 |COMMANDLINE_ARGS|(empty)|(string)|
 |PORT|7820|VALID TCP PORT NUMBER|
