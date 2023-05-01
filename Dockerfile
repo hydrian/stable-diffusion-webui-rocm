@@ -32,7 +32,7 @@ RUN 	apt-get autoremove -y && \
 EXPOSE ${PORT}
 
 VOLUME [ "/sd/configs","/sd/models", "/sd/outputs","/sd/extensions", "/sd/plugins"]
-ENTRYPOINT python -d launch.py 
+ENTRYPOINT python -d launch.py --port ${PORT}
 
 	
 	
