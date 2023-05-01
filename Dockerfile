@@ -6,7 +6,7 @@ ENV PORT=7820 \
     PYTHONUNBUFFERED=1 \
     PYTHONIOENCODING=UTF-8 \
     REQS_FILE='requirements.txt' \
-    COMMANDLINE_ARGS='--data-dir=/sd/configs' 
+    COMMANDLINE_ARGS='' 
 
 WORKDIR /opt
 RUN apt-get -y update && \
