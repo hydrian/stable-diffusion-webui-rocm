@@ -23,7 +23,7 @@ This docker container deploys an AMD ROCm 5.4.2 container based on ubuntu 22.04 
 
 |Default Volume Name| Container Path| Notes |
 |:---| :----: | :--- |
-|configs|/sd/configs| This does not include web-user.sh or web-ui.json. See Issue #3
+|configs|/sd/configs| This does not include web-user.sh or web-ui.json. See Issue #3.
 |models|/sd/models| This directory can use lots of space. Plan accordingly|
 |outputs|/sd/outputs|Location of saved generations goes|
 |extensions|/sd/extensions| Installed custom extensions|
