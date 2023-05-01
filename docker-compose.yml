@@ -11,7 +11,7 @@ services:
       - HSA_OVERRIDE_GFX_VERSION=10.3.0
       # Following line is needed to RX 5700
       # - COMMANDLINE_ARGS='--data-dir=/sd/configs --precision full --no-half'
-    image: sd-ui-5.4
+    image: stable-diffusion-webui-rocm5.4:latest
     ipc: host
     network_mode: "host"
     security_opt:
