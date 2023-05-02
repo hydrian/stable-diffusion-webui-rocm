@@ -1,5 +1,5 @@
 # stable-diffusion-webui-rocm
-A stable diffusion webui configuration for AMD ROCm. This only 
+A stable diffusion webui configuration for AMD ROCm. This only developed to run on Linux because ROCm is only officially supported on Linux. 
 
 This docker container deploys an AMD ROCm 5.4.2 container based on ubuntu 22.04 with pyTorch 2.0. I has the custom version of AUTOMATIC1111 deployed to it so it is optimized for AMD GPUs. 
 
