@@ -8,6 +8,8 @@ This docker container deploys an AMD ROCm 5.4.2 container based on ubuntu 22.04 
 * Working version of docker on 64-bit Linux. Need at least kernel 5.10 for AMD ROCm support. 
 * AMD rocm modules drivers loaded. Recommended 5.4.2 to match current release. 
 * Permissions to create and deploy docker containers
+* 12+ GB of system RAM recommended. Swap can be used but is slower
+* 8GB of VRAM to produce 512x512 images. Command line options may help optimization.
 
 ## Build and Deployment
 
