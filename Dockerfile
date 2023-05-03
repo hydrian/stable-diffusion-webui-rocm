@@ -1,6 +1,6 @@
 FROM ubuntu:jammy
 SHELL ["/bin/bash", "-c"]  
-ENV PORT=7820 \
+ENV PORT=7860 \
     EXTRA_ARGS='' \
     DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
