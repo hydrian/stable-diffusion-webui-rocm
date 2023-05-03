@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag Stable-Diffusion-WebUI-ROCm:$(date +%s)
+      run: docker build . --file Dockerfile --tag stable-diffusion-webui-rocm:$(date +%s)
