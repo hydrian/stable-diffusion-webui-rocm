@@ -23,7 +23,7 @@ There is currently no dockerhub entry for this yet, so you have to build the doc
 4. Verify docker-compose.yml meets your environment need
 5. Run command `docker-compose up`
 6. Wait for deploy to complete
-7. Browse to http://localhost:7820/
+7. Browse to http://localhost:7860/
 
 
 
@@ -34,7 +34,7 @@ There is currently no dockerhub entry for this yet, so you have to build the doc
 |ENV Parameter| Default Value | Possible Values | Notes |
 |:---| :----: | :----: |:--- |
 |COMMANDLINE_ARGS|(empty)|(string)|
-|PORT|7820|VALID TCP PORT NUMBER|
+|PORT|7860|VALID TCP PORT NUMBER|
 
 
 ### Volumes 
