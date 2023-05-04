@@ -25,10 +25,11 @@ If applicable, add screenshots to help explain your problem.
 
 ** Container Output **
 `docker logs <container name>`
+
 **Desktop (please complete the following information):**
  - System RAM & SWAP: [e.g. 16GB RAM + 16GB Swap]
  - AMD GPU & VRAM: [e.g. 6600XT 8GB]
- - OS + Distro and Version: [e.g. iOS]
+ - OS + Distro and Version: [e.g. Arch, Linux Mint 21.1]
  - Host ROCm Version: [e.g. 5.4.2]
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
