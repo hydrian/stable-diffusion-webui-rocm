@@ -10,7 +10,7 @@ ENV PORT=7860 \
 
 WORKDIR /opt
 RUN apt-get -y update && \
-	apt-get install -y --no-install-recommends libstdc++-12-dev ca-certificates wget git libglib2.0-0 apt-utils python3.10-venv python3-pip && \
+	apt-get install -y --no-install-recommends libstdc++-12-dev ca-certificates wget gnupg2 gawk curl git libglib2.0-0 apt-utils python3.10-venv python3-pip && \
 	wget https://repo.radeon.com/amdgpu-install/5.4.2/ubuntu/jammy/amdgpu-install_5.4.50402-1_all.deb && \
 	apt-get install -y ./amdgpu-install_5.4.50402-1_all.deb && \
 	amdgpu-install -y --usecase=rocm --no-dkms && \
