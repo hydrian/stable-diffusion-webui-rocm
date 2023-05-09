@@ -14,7 +14,8 @@ RUN apt-get -y update && \
 	wget https://repo.radeon.com/amdgpu-install/5.5/ubuntu/jammy/amdgpu-install_5.5.50500-1_all.deb && \
 	apt-get install -y ./amdgpu-install_5.5.50500-1_all.deb && \
 	amdgpu-install -y --usecase=rocm --no-dkms && \
-	git clone -b $SD_BRANCH https://github.com/hydrian/stable-diffusion-webui.git /sd
+	git clone -b $SD_BRANCH https://github.com/hydrian/stable-diffusion-webui.git /sd && \
+	true
 
 WORKDIR /sd
 
