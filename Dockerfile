@@ -1,4 +1,5 @@
 FROM ubuntu:jammy
+ARG SD_BRANCH=master
 SHELL ["/bin/bash", "-c"]  
 ENV PORT=7860 \
     DEBIAN_FRONTEND=noninteractive \
@@ -13,7 +14,7 @@ RUN apt-get -y update && \
 	wget https://repo.radeon.com/amdgpu-install/5.4.2/ubuntu/jammy/amdgpu-install_5.4.50402-1_all.deb && \
 	apt-get install -y ./amdgpu-install_5.4.50402-1_all.deb && \
 	amdgpu-install -y --usecase=rocm --no-dkms && \
-	git clone https://github.com/hydrian/stable-diffusion-webui /sd
+	git clone -b $SD_BRANCH https://github.com/hydrian/stable-diffusion-webui.git /sd
 
 WORKDIR /sd
 
