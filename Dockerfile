@@ -1,5 +1,5 @@
 FROM ubuntu:jammy
-ARG SD_BRANCH=master
+ARG SD_BRANCH="rocm5.5"
 SHELL ["/bin/bash", "-c"]  
 ENV PORT=7860 \
     DEBIAN_FRONTEND=noninteractive \
