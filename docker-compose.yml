@@ -11,6 +11,11 @@ services:
       - HSA_OVERRIDE_GFX_VERSION=10.3.0
       # Following line is needed to RX 5700
       # - COMMANDLINE_ARGS='--precision full --no-half'
+    group_add:
+      # Video Group Id: 44
+      - 44
+      # Render Group Id: 155
+      - 155
     image: stable-diffusion-webui-rocm:rocm5.5
     ipc: host
     network_mode: "host"
