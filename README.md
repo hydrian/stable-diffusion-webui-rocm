@@ -18,7 +18,7 @@ There is currently no dockerhub entry for this yet, so you have to build the doc
 ### Recommended Build/Deployment Process
 
 1. Change directory to the git clone of stable-diffusion-webui-rocm
-2. Run on the command `docker build . -t 'stable-diffusion-webui-rocm`
+2. Run on the command `docker build . -t 'stable-diffusion-webui-rocm'`
 3. Wait for build to complete. 
 4. Verify docker-compose.yml meets your environment need
 5. Run command `docker-compose up`
