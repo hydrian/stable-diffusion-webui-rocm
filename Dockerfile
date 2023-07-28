@@ -12,13 +12,16 @@ WORKDIR /opt
 
 RUN apt -y update
 
-RUN apt-get install -y --no-install-recommends libstdc++-12-dev ca-certificates wget gnupg2 gawk curl git libglib2.0-0 apt-utils python3.10-venv python3-pip
+RUN apt-get install -y --no-install-recommends libstdc++-12-dev ca-certificates wget gnupg2 gawk curl git libglib2.0-0 apt-utils python3.10-venv python3-pip libxml2-utils
 
-RUN wget https://repo.radeon.com/amdgpu-install/5.5/ubuntu/jammy/amdgpu-install_5.5.50500-1_all.deb
+# Install AMD Driver
+RUN FILENAME=$(curl https://repo.radeon.com/amdgpu-install/latest/ubuntu/jammy/ | grep deb | xmllint --html --format --xpath "string(//a/@href)" - ) \
+    && TEMP_DEB="$(mktemp)" \
+    && wget -O "$TEMP_DEB" https://repo.radeon.com/amdgpu-install/latest/ubuntu/jammy/"$FILENAME" \
+    && dpkg -i "$TEMP_DEB" \
+    && rm -f "$TEMP_DEB"
 
-RUN apt-get install -y ./amdgpu-install_5.5.50500-1_all.deb
-
-RUN amdgpu-install -y --usecase=rocm --no-dkms
+RUN amdgpu-install -y --usecase=rocm
 
 RUN git clone -b $SD_BRANCH https://github.com/hydrian/stable-diffusion-webui.git /sd
 
